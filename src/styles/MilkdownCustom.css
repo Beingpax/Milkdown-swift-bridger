@@ -39,13 +39,14 @@
   text-align: left !important;
   line-height: 1.2 !important;
   letter-spacing: -0.01em !important;
+  color: #2c2c2c !important; /* Base color for all headings */
 }
 
 /* H1 - Primary heading */
 .milkdown h1 {
   font-size: 1.6em !important;
   font-weight: 800 !important; /* Extra bold */
-  color: #1a1a1a !important;
+  opacity: 1.0 !important; /* Full opacity */
   margin-top: 1em !important;
   margin-bottom: 0.5em !important;
   padding-bottom: 0.2em !important;
@@ -54,67 +55,70 @@
 
 /* H2 - Secondary heading */
 .milkdown h2 {
-  font-size: 1.4em !important;
+  font-size: 1.45em !important;
   font-weight: 700 !important; /* Bold */
-  color: #2c2c2c !important;
+  opacity: 0.95 !important; /* Slightly less prominent */
   margin-top: 0.9em !important;
-  margin-bottom: 0.4em !important;
+  margin-bottom: 0.45em !important;
 }
 
 /* H3 - Tertiary heading */
 .milkdown h3 {
-  font-size: 1.2em !important;
+  font-size: 1.3em !important;
   font-weight: 600 !important; /* Semi-bold */
-  color: #3a3a3a !important;
+  opacity: 0.9 !important;
   margin-top: 0.8em !important;
-  margin-bottom: 0.3em !important;
+  margin-bottom: 0.4em !important;
 }
 
 /* H4 - Quaternary heading */
 .milkdown h4 {
-  font-size: 1.1em !important;
+  font-size: 1.15em !important;
   font-weight: 500 !important; /* Medium */
-  color: #4a4a4a !important;
+  opacity: 0.85 !important;
   margin-top: 0.7em !important;
-  margin-bottom: 0.3em !important;
+  margin-bottom: 0.35em !important;
 }
 
 /* H5 - Quinary heading */
 .milkdown h5 {
-  font-size: 1em !important;
+  font-size: 1.05em !important;
   font-weight: 500 !important; /* Medium */
-  color: #5a5a5a !important;
-  font-style: italic !important;
+  opacity: 0.8 !important;
   margin-top: 0.6em !important;
-  margin-bottom: 0.2em !important;
+  margin-bottom: 0.3em !important;
 }
 
 /* H6 - Senary heading */
 .milkdown h6 {
-  font-size: 0.9em !important;
+  font-size: 0.95em !important;
   font-weight: 400 !important; /* Regular */
-  color: #6a6a6a !important;
-  text-transform: uppercase !important;
-  letter-spacing: 0.05em !important;
+  opacity: 0.75 !important;
   margin-top: 0.5em !important;
-  margin-bottom: 0.2em !important;
+  margin-bottom: 0.25em !important;
 }
 
 /* Reduce spacing after headings */
 .milkdown h1 + p {
-  margin-top: 0.4em !important;
+  margin-top: 0.5em !important;
 }
 
 .milkdown h2 + p {
+  margin-top: 0.45em !important;
+}
+
+.milkdown h3 + p {
+  margin-top: 0.4em !important;
+}
+
+.milkdown h4 + p {
   margin-top: 0.35em !important;
 }
 
-.milkdown h3 + p,
-.milkdown h4 + p {
+.milkdown h5 + p {
   margin-top: 0.3em !important;
 }
 
-.milkdown h5 + p,
 .milkdown h6 + p {
   margin-top: 0.25em !important;
 } 
