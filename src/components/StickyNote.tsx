@@ -7,9 +7,6 @@ export default function StickyNote() {
 
   return (
     <div className="sticky-note">
-      <div className="sticky-note-header" data-tauri-drag-region>
-        <div className="sticky-note-title">Quick Sticky Node</div>
-      </div>
       <div className="sticky-note-content">
         <MarkdownEditor defaultValue={content} />
       </div>

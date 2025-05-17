@@ -19,16 +19,16 @@
         "minHeight": 300,
         "maxWidth": 1200,
         "resizable": true,
-        "decorations": false,
-        "transparent": true,
+        "decorations": true,
+        "transparent": false,
         "alwaysOnTop": true,
-        "skipTaskbar": true
+        "skipTaskbar": false
       }
     ],
     "security": {
       "csp": null
     },
-    "macOSPrivateApi": true
+    "macOSPrivateApi": false
   },
   "bundle": {
     "active": true,

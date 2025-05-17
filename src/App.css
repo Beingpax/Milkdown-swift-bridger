@@ -11,7 +11,7 @@
   line-height: 1.5;
   font-weight: 400;
   color: #213547;
-  background-color: transparent;
+  background-color: #ffffff;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -29,7 +29,7 @@ html, body {
   height: 100%;
   width: 100%;
   overflow: hidden;
-  background-color: transparent;
+  background-color: #ffffff;
 }
 
 #root {
@@ -38,7 +38,7 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: transparent;
+  background-color: #ffffff;
 }
 
 .app-container {
@@ -46,7 +46,7 @@ html, body {
   width: 100%;
   display: flex;
   flex-direction: column;
-  background-color: transparent;
+  background-color: #ffffff;
 }
 
 /* Override some Milkdown styles to better fit in our app */
@@ -138,11 +138,4 @@ button {
   button:active {
     background-color: #0f0f0f69;
   }
-}
-
-/* Tauri drag region */
-[data-tauri-drag-region] {
-  cursor: move;
-  user-select: none;
-  -webkit-user-select: none;
 }

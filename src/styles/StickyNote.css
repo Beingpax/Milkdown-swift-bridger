@@ -1,15 +1,10 @@
 .sticky-note {
-  background-color: rgba(254, 243, 189, 0.98);
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15), 0 5px 10px rgba(0, 0, 0, 0.05);
+  background-color: #ffffff;
   display: flex;
   flex-direction: column;
   height: 100%;
   overflow: hidden;
   user-select: none;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .sticky-note-header {
@@ -19,17 +14,31 @@
   padding: 10px 16px;
   background-color: rgba(0, 0, 0, 0.03);
   -webkit-app-region: drag;
-  app-region: drag;
+  cursor: grab;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  cursor: move;
+  position: relative;
+}
+
+/* Drag handle indicators */
+.sticky-note-header::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 8px;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .sticky-note-title {
   font-size: 14px;
   font-weight: 600;
   color: #333;
+  margin-top: 6px;
 }
 
 .sticky-note-content {
@@ -37,6 +46,12 @@
   display: flex;
   flex-direction: column;
   overflow: auto;
+  padding: 10px;
+}
+
+/* Make sure editor content is not draggable */
+.sticky-note-content * {
+  -webkit-app-region: no-drag;
 }
 
 .sticky-note-textarea {
