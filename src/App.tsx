@@ -1,5 +1,6 @@
 import StickyNote from "./components/StickyNote";
 import "./App.css";
+import "./styles/MilkdownEditor.css";
 
 function App() {
   return (
