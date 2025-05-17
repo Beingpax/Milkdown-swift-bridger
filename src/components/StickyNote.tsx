@@ -3,7 +3,7 @@ import MarkdownEditor from './MarkdownEditor';
 import '../styles/StickyNote.css';
 
 export default function StickyNote() {
-  const [content] = useState('# Quick Note\n\nType your note here...');
+  const [content] = useState('# Welcome to Quick Sticky Nodes\n\nType your note here...');
 
   return (
     <div className="sticky-note">
