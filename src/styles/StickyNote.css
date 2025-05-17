@@ -19,9 +19,11 @@
   padding: 10px 16px;
   background-color: rgba(0, 0, 0, 0.03);
   -webkit-app-region: drag;
+  app-region: drag;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  cursor: move;
 }
 
 .sticky-note-title {

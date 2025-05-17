@@ -139,3 +139,10 @@ button {
     background-color: #0f0f0f69;
   }
 }
+
+/* Tauri drag region */
+[data-tauri-drag-region] {
+  cursor: move;
+  user-select: none;
+  -webkit-user-select: none;
+}
