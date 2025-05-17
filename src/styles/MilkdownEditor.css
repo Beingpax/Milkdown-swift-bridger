@@ -1,0 +1,10 @@
+.milkdown {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Ensure the prose-mirror container also takes full height */
+.milkdown .editor {
+  height: 100% !important;
+  max-width: 100% !important;
+} 
