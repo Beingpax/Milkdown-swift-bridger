@@ -47,7 +47,12 @@ html, body {
   display: flex;
   flex-direction: column;
   background-color: transparent;
-  padding: 0;
+}
+
+/* Override some Milkdown styles to better fit in our app */
+.milkdown {
+  background-color: transparent !important;
+  height: 100%;
 }
 
 .logo {

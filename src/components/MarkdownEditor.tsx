@@ -15,13 +15,9 @@ export default function MarkdownEditor({ defaultValue = '', onChange }: Markdown
   useEffect(() => {
     if (!editorRef.current) return;
 
-    const editorRoot = document.createElement('div');
-    editorRoot.className = 'editor-root';
-    editorRef.current.appendChild(editorRoot);
-
     // Create a new Crepe instance
     const crepe = new Crepe({
-      root: editorRoot,
+      root: editorRef.current,
       defaultValue,
     });
 
@@ -31,12 +27,6 @@ export default function MarkdownEditor({ defaultValue = '', onChange }: Markdown
     // Create the editor
     crepe.create().then(() => {
       console.log('Milkdown editor created');
-      
-      // Set up a listener for markdown changes if needed
-      if (onChange) {
-        // This would require additional setup with the Milkdown listener plugin
-        // For simplicity, we'll implement this later if needed
-      }
     });
 
     // Clean up
@@ -45,11 +35,8 @@ export default function MarkdownEditor({ defaultValue = '', onChange }: Markdown
         crepeRef.current.destroy();
         crepeRef.current = null;
       }
-      if (editorRef.current?.contains(editorRoot)) {
-        editorRef.current.removeChild(editorRoot);
-      }
     };
   }, [defaultValue, onChange]);
 
-  return <div ref={editorRef} className="milkdown-editor-container" />;
+  return <div ref={editorRef} className="milkdown-editor" />;
 } 

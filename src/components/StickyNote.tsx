@@ -1,22 +1,17 @@
 import { useState } from 'react';
 import MarkdownEditor from './MarkdownEditor';
 import '../styles/StickyNote.css';
-import '../styles/MarkdownEditor.css';
 
 export default function StickyNote() {
-  const [content, setContent] = useState('# Quick Note\n\nType your note here...');
-
-  const handleContentChange = (newContent: string) => {
-    setContent(newContent);
-  };
+  const [content] = useState('# Quick Note\n\nType your note here...');
 
   return (
     <div className="sticky-note">
+      <div className="sticky-note-header">
+        <div className="sticky-note-title">Quick Sticky Node</div>
+      </div>
       <div className="sticky-note-content">
-        <MarkdownEditor 
-          defaultValue={content} 
-          onChange={handleContentChange} 
-        />
+        <MarkdownEditor defaultValue={content} />
       </div>
     </div>
   );
