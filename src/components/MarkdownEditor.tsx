@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import { Crepe } from '@milkdown/crepe';
 import '@milkdown/crepe/theme/common/style.css';
 import '@milkdown/crepe/theme/frame.css';
@@ -11,7 +11,6 @@ interface MarkdownEditorProps {
 export default function MarkdownEditor({ defaultValue = '', onChange }: MarkdownEditorProps) {
   const editorRef = useRef<HTMLDivElement>(null);
   const crepeRef = useRef<Crepe | null>(null);
-  const [editorReady, setEditorReady] = useState(false);
 
   useEffect(() => {
     if (!editorRef.current) return;
@@ -32,7 +31,6 @@ export default function MarkdownEditor({ defaultValue = '', onChange }: Markdown
     // Create the editor
     crepe.create().then(() => {
       console.log('Milkdown editor created');
-      setEditorReady(true);
       
       // Set up a listener for markdown changes if needed
       if (onChange) {
