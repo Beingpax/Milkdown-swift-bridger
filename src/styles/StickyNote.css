@@ -1,12 +1,15 @@
 .sticky-note {
-  background-color: #fef3bd;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  background-color: rgba(254, 243, 189, 0.98);
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15), 0 5px 10px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
   height: 100%;
   overflow: hidden;
   user-select: none;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .sticky-note-header {
@@ -14,9 +17,11 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px 16px;
-  background-color: rgba(0, 0, 0, 0.05);
-  cursor: grab;
+  background-color: rgba(0, 0, 0, 0.03);
   -webkit-app-region: drag;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .sticky-note-title {
