@@ -1,5 +1,10 @@
 /* Custom styles to hide Milkdown editor's plus button and drag handle */
 
+/* Use a modern font stack for the entire editor */
+.milkdown {
+  font-family: "SF Pro Text", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Arial, sans-serif !important;
+}
+
 /* Hide the block handle (drag handle and plus button) */
 .milkdown .milkdown-block-handle {
   display: none !important;
@@ -41,15 +46,19 @@
   margin-top: 0.5em !important;
   margin-bottom: 0.2em !important;
   line-height: 1.2 !important;
+  font-weight: 800 !important; /* Make headings extra bold */
+  font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif !important;
 }
 
 /* Decrease heading sizes */
 .milkdown h1 {
   font-size: 1.6em !important;
+  letter-spacing: -0.02em !important;
 }
 
 .milkdown h2 {
   font-size: 1.4em !important;
+  letter-spacing: -0.01em !important;
 }
 
 .milkdown h3 {
@@ -75,6 +84,7 @@
   margin-top: 0.3em !important;
   margin-bottom: 0.3em !important;
   line-height: 1.3 !important;
+  font-size: 14px !important;
 }
 
 /* Reduce spacing for all block elements */
