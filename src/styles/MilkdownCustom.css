@@ -1,11 +1,5 @@
 /* Custom styles to hide Milkdown editor's plus button and drag handle */
 
-/* Use a modern font stack for the entire editor */
-.milkdown {
-  font-family: "SF Pro Text", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Arial, sans-serif !important;
-  color: #1c1c1e !important; /* Darker, blackish text color */
-}
-
 /* Hide the block handle (drag handle and plus button) */
 .milkdown .milkdown-block-handle {
   display: none !important;
@@ -29,25 +23,13 @@
   max-width: 100% !important;
 }
 
-/* Make sure editor takes full height and adjust for cursor alignment */
+/* Make sure editor takes full height */
 .ProseMirror {
   min-height: 300px !important;
   outline: none !important;
-  padding: 10px !important;
 }
 
-/* General text element styling for cursor alignment and color */
-.ProseMirror p,
-.ProseMirror li,
-.ProseMirror blockquote,
-.ProseMirror pre,
-.ProseMirror td,
-.ProseMirror th {
-  line-height: 1.4 !important; /* Adjusted line height for cursor vertical alignment */
-  color: #1c1c1e !important;
-}
-
-/* Left-align all headings and adjust their size */
+/* Left-align all headings, adjust their size, and reduce spacing */
 .milkdown h1,
 .milkdown h2,
 .milkdown h3,
@@ -55,23 +37,18 @@
 .milkdown h5,
 .milkdown h6 {
   text-align: left !important;
-  margin-top: 0.5em !important;
-  margin-bottom: 0.2em !important;
-  line-height: 1.25 !important; /* Adjusted line-height for headings */
-  font-weight: 800 !important; /* Make headings extra bold */
-  font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif !important;
-  color: #1c1c1e !important;
+  margin-top: 0.4em !important;
+  margin-bottom: 0.15em !important;
+  padding: 0 !important;
 }
 
 /* Decrease heading sizes */
 .milkdown h1 {
   font-size: 1.6em !important;
-  letter-spacing: -0.02em !important;
 }
 
 .milkdown h2 {
   font-size: 1.4em !important;
-  letter-spacing: -0.01em !important;
 }
 
 .milkdown h3 {
@@ -82,25 +59,10 @@
   font-size: 1.1em !important;
 }
 
-/* Reduce spacing after headings */
-.milkdown h1 + p,
-.milkdown h2 + p,
-.milkdown h3 + p,
-.milkdown h4 + p,
-.milkdown h5 + p,
-.milkdown h6 + p {
-  margin-top: 0.2em !important;
-}
-
-/* Reduce spacing between paragraphs */
+/* Reduce spacing for paragraphs */
 .milkdown p {
-  margin-top: 0.3em !important;
-  margin-bottom: 0.3em !important;
-  font-size: 14px !important;
-}
-
-/* Reduce spacing for all block elements */
-.milkdown .editor > * {
-  margin-top: 0.3em !important;
-  margin-bottom: 0.3em !important;
+  margin-top: 0.15em !important;
+  margin-bottom: 0.15em !important;
+  padding: 0 !important;
+  line-height: 1.4 !important;
 } 
