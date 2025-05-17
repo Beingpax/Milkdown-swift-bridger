@@ -1,12 +1,10 @@
 .milkdown-editor-container {
   height: 100%;
   width: 100%;
-  overflow: auto;
 }
 
 .editor-root {
   height: 100%;
-  padding: 0;
 }
 
 /* Override some Milkdown styles to match our sticky note */
