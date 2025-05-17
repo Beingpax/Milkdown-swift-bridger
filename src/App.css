@@ -55,25 +55,6 @@ html, body {
   height: 100%;
 }
 
-/* Hide Milkdown's plus button and drag handle */
-.milkdown .editor-container .editor .ProseMirror-gapcursor::after,
-.milkdown .editor-container .editor .button-wrapper,
-.milkdown .editor-container .editor .handle,
-.milkdown .editor-container .editor .drag-handle,
-.milkdown .editor-container .editor .button {
-  display: none !important;
-}
-
-/* Hide the plus button that appears when hovering between blocks */
-.milkdown .editor-container .editor .button-container {
-  display: none !important;
-}
-
-/* Hide the drag handle on the left side of blocks */
-.milkdown .editor-container .editor .handle-container {
-  display: none !important;
-}
-
 .logo {
   height: 6em;
   padding: 1.5em;

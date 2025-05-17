@@ -1,0 +1,30 @@
+/* Custom styles to hide Milkdown editor's plus button and drag handle */
+
+/* Hide the block handle (drag handle and plus button) */
+.milkdown .milkdown-block-handle {
+  display: none !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Hide the slash menu */
+.milkdown .milkdown-slash-menu {
+  display: none !important;
+}
+
+/* Additional styling for our app */
+.milkdown {
+  padding: 0 !important;
+  height: 100% !important;
+}
+
+.milkdown .editor {
+  padding: 0 !important;
+  max-width: 100% !important;
+}
+
+/* Make sure editor takes full height */
+.ProseMirror {
+  min-height: 300px !important;
+  outline: none !important;
+} 
