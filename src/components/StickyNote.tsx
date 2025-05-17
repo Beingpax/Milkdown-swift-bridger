@@ -3,7 +3,17 @@ import MilkdownEditor from './MilkdownEditor';
 import '../styles/StickyNote.css';
 
 export default function StickyNote() {
-  const [content, setContent] = useState('# Quick Note\n\nType your note here...');
+  const [content] = useState(`# Quick Note
+
+Welcome to QuickStickyNodes!
+
+- Write your notes here
+- **Bold** text or *italic*
+- Create [links](https://example.com)
+- Make lists and more...
+
+> Markdown formatting is supported
+`);
 
   return (
     <div className="sticky-note">
