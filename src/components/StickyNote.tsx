@@ -12,9 +12,6 @@ export default function StickyNote() {
 
   return (
     <div className="sticky-note">
-      <div className="sticky-note-header">
-        <div className="sticky-note-title">Quick Sticky Node</div>
-      </div>
       <div className="sticky-note-content">
         <MarkdownEditor 
           defaultValue={content} 
