@@ -1,88 +1,77 @@
 .milkdown-editor-container {
-  width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
-  overflow: auto;
-}
-
-.milkdown-editor {
-  flex: 1;
-  overflow: auto;
   height: 100%;
   width: 100%;
-  padding: 0;
-  background-color: transparent;
-}
-
-.milkdown-editor .milkdown {
-  height: 100%;
-  background-color: transparent !important;
-  border: none;
-  font-size: 14px;
-}
-
-/* Customize the Milkdown editor to match our theme */
-.milkdown-editor .milkdown .editor {
-  background-color: transparent;
-  color: #333 !important;
+  overflow: auto;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-/* Ensure the content area fills the available space */
-.milkdown-editor .milkdown .editor .ProseMirror {
-  min-height: 100%;
+.milkdown-editor-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  font-size: 14px;
+  color: #666;
+}
+
+.milkdown {
+  height: 100%;
   padding: 0;
+  outline: none;
+  background-color: transparent;
 }
 
-/* Customize heading styles */
-.milkdown-editor .milkdown .editor h1 {
+.milkdown .editor {
+  height: 100%;
+  padding: 16px;
+  outline: none;
+  background-color: transparent;
+}
+
+/* Override some nord theme styles to fit our sticky note */
+.milkdown.editor p {
+  margin: 0.5em 0;
+}
+
+.milkdown.editor h1 {
   font-size: 1.5em;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  color: #333 !important;
+  margin: 0.5em 0;
 }
 
-.milkdown-editor .milkdown .editor h2 {
+.milkdown.editor h2 {
   font-size: 1.3em;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  color: #333 !important;
+  margin: 0.5em 0;
 }
 
-.milkdown-editor .milkdown .editor h3 {
+.milkdown.editor h3 {
   font-size: 1.1em;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  color: #333 !important;
+  margin: 0.5em 0;
 }
 
-/* Customize lists */
-.milkdown-editor .milkdown .editor ul,
-.milkdown-editor .milkdown .editor ol {
+/* Reduce padding on lists */
+.milkdown.editor ul, 
+.milkdown.editor ol {
   padding-left: 1.5em;
   margin: 0.5em 0;
 }
 
-/* Customize blockquotes */
-.milkdown-editor .milkdown .editor blockquote {
-  border-left: 3px solid #ddd;
-  padding-left: 1em;
-  margin: 0.5em 0;
-  color: #555 !important;
-}
-
-/* Hide scrollbars unless needed */
-.milkdown-editor::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-.milkdown-editor::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.1);
+/* Style code blocks to fit the sticky note */
+.milkdown.editor pre {
+  background-color: rgba(0, 0, 0, 0.05);
   border-radius: 4px;
+  padding: 8px;
+  overflow-x: auto;
 }
 
-.milkdown-editor::-webkit-scrollbar-track {
-  background-color: transparent;
+.milkdown.editor code {
+  font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+  font-size: 0.9em;
+}
+
+/* Make the editor transparent to fit our sticky note */
+.milkdown-theme-nord {
+  background-color: transparent !important;
 } 

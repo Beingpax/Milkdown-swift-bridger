@@ -1,19 +1,22 @@
-import { useState } from 'react';
-import MilkdownEditor from './MilkdownEditor';
+import { useState, useEffect, useRef } from 'react';
 import '../styles/StickyNote.css';
 
 export default function StickyNote() {
-  const [content] = useState(`# Quick Note
+  const [content, setContent] = useState('');
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
 
-Welcome to QuickStickyNodes!
+  useEffect(() => {
+    // Auto-focus the textarea when component mounts
+    if (textareaRef.current) {
+      textareaRef.current.focus();
+    }
+  }, []);
 
-- Write your notes here
-- **Bold** text or *italic*
-- Create [links](https://example.com)
-- Make lists and more...
+  const handleContentChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    setContent(e.target.value);
+  };
 
-> Markdown formatting is supported
-`);
+  // Auto-save implementation will go here in the future
 
   return (
     <div className="sticky-note">
@@ -21,7 +24,13 @@ Welcome to QuickStickyNodes!
         <div className="sticky-note-title">Quick Note</div>
       </div>
       <div className="sticky-note-content">
-        <MilkdownEditor defaultValue={content} />
+        <textarea
+          ref={textareaRef}
+          className="sticky-note-textarea"
+          value={content}
+          onChange={handleContentChange}
+          placeholder="Type your note here..."
+        />
       </div>
     </div>
   );

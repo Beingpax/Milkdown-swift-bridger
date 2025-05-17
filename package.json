@@ -10,7 +10,15 @@
     "tauri": "tauri"
   },
   "dependencies": {
+    "@milkdown/core": "^7.10.4",
     "@milkdown/crepe": "^7.10.4",
+    "@milkdown/plugin-clipboard": "^7.10.4",
+    "@milkdown/plugin-history": "^7.10.4",
+    "@milkdown/plugin-listener": "^7.10.4",
+    "@milkdown/preset-commonmark": "^7.10.4",
+    "@milkdown/prose": "^7.10.4",
+    "@milkdown/react": "^7.10.4",
+    "@milkdown/theme-nord": "^7.10.4",
     "@tauri-apps/api": "^2",
     "@tauri-apps/plugin-opener": "^2",
     "react": "^18.3.1",
