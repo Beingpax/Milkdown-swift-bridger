@@ -3,7 +3,7 @@
 /* Use a modern font stack for the entire editor */
 .milkdown {
   font-family: "SF Pro Text", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Arial, sans-serif !important;
-  color: #222222 !important; /* Darker text color, almost black but not harsh */
+  color: #1c1c1e !important; /* Darker, blackish text color */
 }
 
 /* Hide the block handle (drag handle and plus button) */
@@ -29,20 +29,22 @@
   max-width: 100% !important;
 }
 
-/* Make sure editor takes full height */
+/* Make sure editor takes full height and adjust for cursor alignment */
 .ProseMirror {
   min-height: 300px !important;
   outline: none !important;
   padding: 10px !important;
 }
 
-/* Fix cursor alignment */
-.ProseMirror .ProseMirror-cursor {
-  border-left: 1px solid black !important;
-  border-right: none !important;
-  margin-top: 0 !important;
-  position: absolute !important;
-  z-index: 1 !important;
+/* General text element styling for cursor alignment and color */
+.ProseMirror p,
+.ProseMirror li,
+.ProseMirror blockquote,
+.ProseMirror pre,
+.ProseMirror td,
+.ProseMirror th {
+  line-height: 1.5 !important; /* Adjust line height for better cursor vertical alignment */
+  color: #1c1c1e !important;
 }
 
 /* Left-align all headings and adjust their size */
@@ -55,10 +57,10 @@
   text-align: left !important;
   margin-top: 0.5em !important;
   margin-bottom: 0.2em !important;
-  line-height: 1.2 !important;
+  line-height: 1.3 !important; /* Adjusted line-height for headings */
   font-weight: 800 !important; /* Make headings extra bold */
   font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif !important;
-  color: #222222 !important; /* Darker text color for headings */
+  color: #1c1c1e !important;
 }
 
 /* Decrease heading sizes */
@@ -94,18 +96,11 @@
 .milkdown p {
   margin-top: 0.3em !important;
   margin-bottom: 0.3em !important;
-  line-height: 1.3 !important;
   font-size: 14px !important;
-  color: #222222 !important; /* Darker text color for paragraphs */
 }
 
 /* Reduce spacing for all block elements */
 .milkdown .editor > * {
   margin-top: 0.3em !important;
   margin-bottom: 0.3em !important;
-}
-
-/* Fix text selection color */
-.milkdown ::selection {
-  background-color: rgba(0, 122, 255, 0.2) !important;
 } 
