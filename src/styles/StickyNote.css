@@ -1,11 +1,11 @@
 .sticky-note {
-  background-color: #ffffff;
   display: flex;
   flex-direction: column;
   height: 100%;
   overflow: hidden;
   user-select: none;
   transition: background-color 0.3s ease;
+  border-radius: 4px;
 }
 
 .sticky-note-header {

@@ -1,11 +1,22 @@
 .color-toolbar {
   width: 100%;
   padding: 6px 8px;
-  background-color: #f7f7f7;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: rgba(247, 247, 247, 0.7);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: opacity 0.3s ease;
+}
+
+.sticky-note:hover .color-toolbar {
+  opacity: 1;
+}
+
+.color-toolbar:not(:hover) {
+  opacity: 0.85;
 }
 
 .color-options {
