@@ -19,6 +19,24 @@
   max-width: 100% !important;
 }
 
+
+/* Hide the tab group in slash menu */
+.milkdown .milkdown-slash-menu .tab-group {
+  display: none;
+}
+
+/* Hide menu group headers in slash menu */
+.milkdown .milkdown-slash-menu .menu-groups .menu-group h6 {
+  display: none;
+}
+
+/* Limit max height of menu groups and ensure proper scrolling */
+.milkdown .milkdown-slash-menu .menu-groups {
+  max-height: 250px !important;
+  max-width: 180px !important;
+  overflow-y: auto !important;
+}
+
 /* Make sure editor takes full height */
 .ProseMirror {
   min-height: 300px !important;
@@ -118,3 +136,5 @@
 .milkdown h6 + p {
   margin-top: 0.25em !important;
 } 
+
+/* Milkdown Slash Menu Customization */
