@@ -5,6 +5,7 @@
   height: 100%;
   overflow: hidden;
   user-select: none;
+  transition: background-color 0.3s ease;
 }
 
 .sticky-note-header {
@@ -53,6 +54,8 @@
 .sticky-note-content * {
   -webkit-app-region: no-drag;
 }
+
+/* Color toolbar styling moved to ColorToolbar.css */
 
 .sticky-note-textarea {
   flex: 1;
