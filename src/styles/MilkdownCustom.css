@@ -7,12 +7,27 @@
   pointer-events: none !important;
 }
 
-/* Make slash menu smaller and more compact */
+/* Make slash menu smaller and more compact, ensure it stays within window bounds */
 .milkdown .milkdown-slash-menu {
   transform: scale(0.85) !important; /* Make the entire menu smaller */
   transform-origin: top left !important;
   border-radius: 8px !important; /* Smaller border radius */
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15) !important; /* Lighter shadow */
+  max-width: 85vw !important; /* Limit width to viewport size */
+  max-height: 70vh !important; /* Limit height to viewport size */
+  overflow: auto !important; /* Add scrolling if needed */
+  position: fixed !important; /* Use fixed positioning */
+}
+
+/* Ensure the menu doesn't go off-screen */
+.milkdown .milkdown-slash-menu[style*="left"] {
+  left: max(10px, attr(style-left)) !important; /* Ensure at least 10px from left edge */
+  right: auto !important;
+}
+
+.milkdown .milkdown-slash-menu[style*="top"] {
+  top: max(10px, attr(style-top)) !important; /* Ensure at least 10px from top edge */
+  bottom: auto !important;
 }
 
 .milkdown .milkdown-slash-menu .tab-group {
@@ -22,6 +37,7 @@
 .milkdown .milkdown-slash-menu .tab-group ul {
   padding: 4px 6px !important; /* Reduced padding */
   gap: 6px !important; /* Less gap between items */
+  flex-wrap: wrap !important; /* Allow wrapping if too many tabs */
 }
 
 .milkdown .milkdown-slash-menu .tab-group ul li {
@@ -31,7 +47,7 @@
 
 .milkdown .milkdown-slash-menu .menu-groups {
   padding: 0 8px 8px !important; /* Reduced padding */
-  max-height: 320px !important; /* Smaller max height */
+  max-height: calc(70vh - 60px) !important; /* Adjust max height to viewport */
 }
 
 .milkdown .milkdown-slash-menu .menu-groups .menu-group h6 {
@@ -40,7 +56,8 @@
 }
 
 .milkdown .milkdown-slash-menu .menu-groups .menu-group li {
-  min-width: 180px !important; /* Narrower width */
+  min-width: 160px !important; /* Narrower width */
+  max-width: calc(85vw - 40px) !important; /* Limit item width based on viewport */
   padding: 8px 8px !important; /* Reduced padding */
   gap: 12px !important; /* Less gap between icon and text */
 }
@@ -48,10 +65,14 @@
 .milkdown .milkdown-slash-menu .menu-groups .menu-group li svg {
   width: 20px !important; /* Smaller icons */
   height: 20px !important;
+  flex-shrink: 0 !important; /* Prevent icon from shrinking */
 }
 
 .milkdown .milkdown-slash-menu .menu-groups .menu-group li > span {
   font-size: 12px !important; /* Smaller font */
+  white-space: nowrap !important; /* Prevent text wrapping */
+  overflow: hidden !important; /* Hide overflow */
+  text-overflow: ellipsis !important; /* Add ellipsis for long text */
 }
 
 /* Additional styling for our app */
